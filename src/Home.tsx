@@ -25,6 +25,7 @@ const CounterText = styled.span``; // add your styles here
 
 const MintContainer = styled.div`
   margin: 0 auto;
+  padding-top: 2em;
 `; // add your styles here
 
 const MintButton = styled(Button)``; // add your styles here
@@ -36,7 +37,7 @@ export interface HomeProps {
   startDate: number;
   treasury: anchor.web3.PublicKey;
   txTimeout: number;
-  mintPrice: number;
+  mintPrice: any;
 }
 
 const Home = (props: HomeProps) => {
@@ -172,8 +173,9 @@ const Home = (props: HomeProps) => {
 
   return (
     <main>
-      <img src={require('./dsdLogoTrans.png').default} width="400" height="400" alt="DSD Logo" />
-      
+      <img src={require('./dsdLogoTrans.png').default} width="300" height="300" alt="DSD Logo" />
+      <img src={require('./raffle.jpg').default} width="640" height="200" alt="DSD Raffle" />
+
       <MintContainer>
         {wallet && (
           <p>Wallet {shortenAddress(wallet.publicKey.toBase58() || "")}</p>
