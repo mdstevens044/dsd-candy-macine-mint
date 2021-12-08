@@ -177,13 +177,11 @@ const Home = (props: HomeProps) => {
       <img src={require('./raffle.jpg').default} width="640" height="200" alt="DSD Raffle" />
 
       <MintContainer>
-        {wallet && (
-          <p>Wallet {shortenAddress(wallet.publicKey.toBase58() || "")}</p>
-        )}
+      {/*{wallet && (<p>Wallet {shortenAddress(wallet.publicKey.toBase58() || "")}</p> )}
 
-        {wallet && <p>Balance: {(balance || 0).toLocaleString()} SOL</p>}
+  {wallet && <p>Balance: {(balance || 0).toLocaleString()} SOL</p>}*/}
 
-       {wallet && <p>Mint Price: {(mintPrice || 0).toLocaleString()} SOL</p>}
+        {wallet && <p>Mint Price: {(mintPrice || 0).toLocaleString()} SOL</p>}
 
         {wallet && <p>Total Available: {itemsAvailable}</p>}
 
